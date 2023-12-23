@@ -95,12 +95,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               TextField(
                 onChanged: onSearchText,
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: const TextStyle(fontSize: 16, color: Colors.white),
                 decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 12),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 12),
                     hintText: "Search notes...",
-                    hintStyle: TextStyle(color: Colors.grey),
-                    prefixIcon: Icon(
+                    hintStyle: const TextStyle(color: Colors.grey),
+                    prefixIcon: const Icon(
                       Icons.search,
                       color: Colors.grey,
                     ),
@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Expanded(
                   child: Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: ListView.builder(
                   itemCount: filterdNotes.length,
                   itemBuilder: (context, index) {
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             overflow: TextOverflow.ellipsis,
                             text: TextSpan(
                                 text: '${filterdNotes[index].title}\n',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
@@ -224,7 +224,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   content: result[1],
                   modifiedTime: DateTime.now()));
               onSearchText("");
-              ;
             });
           }
         },
