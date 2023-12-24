@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Padding(
           padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
           child: Column(
@@ -68,7 +68,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const Text(
                     'Notes',
-                    style: TextStyle(fontSize: 30, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.w900),
                   ),
                   IconButton(
                       onPressed: () {
@@ -81,12 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 45,
                           height: 45,
                           decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 78, 78, 78)
+                              color: const Color.fromARGB(255, 233, 233, 233)
                                   .withOpacity(0.8),
                               borderRadius: BorderRadius.circular(10)),
                           child: const Icon(
                             Icons.sort,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 0, 0, 0),
                           )))
                 ],
               ),
@@ -95,25 +98,28 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               TextField(
                 onChanged: onSearchText,
-                style: const TextStyle(fontSize: 16, color: Colors.white),
+                style: const TextStyle(
+                    fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(vertical: 12),
                     hintText: "Search notes...",
-                    hintStyle: const TextStyle(color: Colors.grey),
+                    hintStyle:
+                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                     prefixIcon: const Icon(
                       Icons.search,
-                      color: Colors.grey,
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                     filled: true,
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
-                      borderSide: const BorderSide(color: Colors.transparent),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
-                      borderSide: const BorderSide(color: Colors.transparent),
+                      borderSide: const BorderSide(color: Colors.white),
                     ),
-                    fillColor: Colors.grey.shade800),
+                    fillColor: const Color.fromARGB(255, 243, 243, 243)),
               ),
               Expanded(
                   child: Padding(
@@ -228,11 +234,11 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
         elevation: 2,
-        backgroundColor: Colors.grey.shade800,
+        backgroundColor: const Color.fromARGB(255, 207, 255, 252),
         child: const Icon(
           Icons.add,
           size: 38,
-          color: Color.fromARGB(255, 213, 213, 213),
+          color: Color.fromARGB(255, 0, 0, 0),
         ),
       ),
     );
